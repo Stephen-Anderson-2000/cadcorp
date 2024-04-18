@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadcorp", "Cadcorp.csproj", "{38A4246A-A825-4904-870C-CC5355A20F32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A4246A-A825-4904-870C-CC5355A20F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A4246A-A825-4904-870C-CC5355A20F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A4246A-A825-4904-870C-CC5355A20F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A4246A-A825-4904-870C-CC5355A20F32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1780787-B595-46A1-81FE-EF52042E5384}
+	EndGlobalSection
+EndGlobal
