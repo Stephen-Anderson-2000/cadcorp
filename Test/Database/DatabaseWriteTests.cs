@@ -1,3 +1,9 @@
+using Cadcorp.Database;
+using Cadcorp.Utilities;
+using FluentAssertions;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+
 namespace Test.Database;
 
 public class DatabaseWriteTests
