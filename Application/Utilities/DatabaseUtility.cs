@@ -5,7 +5,7 @@ namespace Cadcorp.Utilities;
 
 public class DatabaseUtility
 {
-    public static int InsertAddresses(Address[] addressList, string connectionString = "Data Source=/Database/cadcorp.db")
+    public static int InsertAddresses(List<Address> addressList, string connectionString = "Data Source=/Database/cadcorp.db")
     {
         var insertedRows = 0;
 
