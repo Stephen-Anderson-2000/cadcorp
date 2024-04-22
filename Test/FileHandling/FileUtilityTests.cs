@@ -37,6 +37,6 @@ public class FileUtilityTests
 
         var result = FileUtility.ReadAddressCSV(filePath);
 
-        result.Should().BeEquivalentTo(expected);
+        result.Should().BeEquivalentTo(expected, options => options.Excluding(addr => addr.Uid));
     }
 }

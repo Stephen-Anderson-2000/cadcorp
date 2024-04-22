@@ -1,24 +1,18 @@
 ﻿using Cadcorp.Database;
-using Microsoft.EntityFrameworkCore;
 
 namespace Cadcorp.Utilities;
 
 public class DatabaseUtility
 {
-    public static int InsertAddresses(Address[] addressList, string connectionString = "Data Source=/Database/cadcorp.db")
+    public static int InsertAddresses(List<Address> addressList)
     {
         var insertedRows = 0;
 
-        var options = new DbContextOptionsBuilder<AddressContext>().
-            UseSqlite(connectionString)
-            .Options;
-
-        using (var db = new AddressContext(options))
+        using (var db = new AddressContext())
         {
-            var addressSet = db.Set<Address>();
             foreach (var address in addressList)
             {
-                addressSet.Add(address);
+                db.Addresses.Add(address);
             }
 
             insertedRows = db.SaveChanges();

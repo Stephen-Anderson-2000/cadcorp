@@ -24,7 +24,7 @@ public class DatabaseWriteTests
         using var db = new AddressContext(options);
         db.Database.EnsureDeleted();
         db.Database.EnsureCreated();
-        db.Add(new Address { Id = 1, Line1 = "11 Bramley Hill", Town = "Ipswich", PostCode = "IP4 2AE" });
+        db.Add(new Address { Line1 = "11 Bramley Hill", Town = "Ipswich", PostCode = "IP4 2AE" });
         var result = db.SaveChanges();
         result.Should().Be(1);
     }
