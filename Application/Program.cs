@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Cadcorp.Utilities;
+
+const string FILE_PATH = "data.csv";
+var addresses = FileUtility.ReadAddressCSV(FILE_PATH);
