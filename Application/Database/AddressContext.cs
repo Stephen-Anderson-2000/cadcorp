@@ -28,7 +28,7 @@ public partial class AddressContext : DbContext
             entity.HasKey(e => e.Uid);
             entity.Property(e => e.Uid)
                 .HasColumnType("TEXT (36)")
-                .HasColumnName("id");
+                .HasColumnName("uid");
             entity.Property(e => e.Line1)
                 .HasColumnType("TEXT (255)")
                 .HasColumnName("line1");
