@@ -17,15 +17,19 @@ public partial class AddressContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=.\\Database\\cadcorp.db");
+        // Unideal but I'm not sure why the relative path doesn't work properly
+        //optionsBuilder.UseSqlite("Data Source=.\\Database\\cadcorp.db");
+        optionsBuilder.UseSqlite("Data Source = C:\\Users\\User\\Documents\\repos\\cadcorp\\Application\\Database\\cadcorp.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Address>(entity =>
         {
-
             entity.HasKey(e => e.Uid);
+
+            entity.ToTable("addresses");
+
             entity.Property(e => e.Uid)
                 .HasColumnType("TEXT (36)")
                 .HasColumnName("uid");
