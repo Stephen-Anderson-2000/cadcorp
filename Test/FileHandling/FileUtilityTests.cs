@@ -24,4 +24,19 @@ public class FileUtilityTests
         result.Town.Should().Be(expected.Town);
         result.Line1.Should().Be(expected.Line1);
     }
+
+    [Fact]
+    public void ReadAddressFileTest()
+    {
+        var filePath = "FileHandling/testFile.csv";
+        var expected = new List<Address>() {
+            new() { Line1 = "30 Gilpins Gallop", Town = "Stanstead Abbotts", PostCode = "SG12 8BD" },
+            new() { Line1 = "Mulberry House", Line2 = "Danebridge Road", Town = "Much Hadham", PostCode = "SG10 6HY" },
+            new() { Line1 = "Unit A", Line2 = "Mindenhall Court", Line3 = "High Street", Town = "Stevenage", PostCode = "SG1 3UN" }
+        };
+
+        var result = FileUtility.ReadAddressCSV(filePath);
+
+        result.Should().BeEquivalentTo(expected);
+    }
 }

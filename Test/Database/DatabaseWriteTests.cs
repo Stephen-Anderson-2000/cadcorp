@@ -32,8 +32,8 @@ public class DatabaseWriteTests
     [Fact]
     public void DatabaseInserts_Single()
     {
-        var address = new Address[] { new() { Line1 = "11 Bramley Hill", Town = "Ipswich", PostCode = "IP4 2AE" } };
+        var address = new List<Address> { new() { Line1 = "11 Bramley Hill", Town = "Ipswich", PostCode = "IP4 2AE" } };
         var result = DatabaseUtility.InsertAddresses(address, CONNECTION_STRING);
-        result.Should().Be(address.Length);
+        result.Should().Be(address.Count);
     }
 }
